@@ -28,8 +28,8 @@
  */
 
 function yelling(words: string[]): string[] {
-  // Replace the code below with your own code
-  return []
+  let newWords = words.map(word => word.toUpperCase())
+  return newWords
 }
 
 /**
@@ -43,8 +43,8 @@ function yelling(words: string[]): string[] {
  */
 
 function doubleTrouble(numbers: number[]): number[] {
-  // Replace the code below with your own code
-  return []
+  let newScores = numbers.map(number => number * 2)
+  return newScores
 }
 
 /*
@@ -57,10 +57,11 @@ function doubleTrouble(numbers: number[]): number[] {
  */
 
 function stringyIndexes(strings: string[]): string[] {
-  // Replace the code below with your own code
-  return []
+  let newWords = strings.map(
+    (string, index) => `${string} is at index ${index}`
+  )
+  return newWords
 }
-
 /*
  * 4) Define a function named onlyTheEvenSurvive that accepts an array of
  * numbers and returns only the elements that are even
@@ -70,8 +71,8 @@ function stringyIndexes(strings: string[]): string[] {
  */
 
 function onlyTheEvenSurvive(numbers: number[]): number[] {
-  // Replace the code below with your own code
-  return []
+  const newNumbers = numbers.filter(number => number % 2 == 0)
+  return newNumbers
 }
 
 /*
@@ -83,8 +84,8 @@ function onlyTheEvenSurvive(numbers: number[]): number[] {
  */
 
 function onlyTheEvenIndexedSurvive(numbers: number[]): number[] {
-  // Replace the code below with your own code
-  return []
+  const newNumbers = numbers.filter((number, index) => index % 2 == 0)
+  return newNumbers
 }
 
 /*
@@ -109,9 +110,15 @@ type Movie = {
   year: number
   score: number
 }
-function bestMoviesOfTheYear(movieObjectArray: Movie[], year: number): string[] {
-  // Replace the code below with your own code
-  return []
+function bestMoviesOfTheYear(
+  movieObjectArray: Movie[],
+  year: number
+): string[] {
+  const newMovies = movies
+    .filter(movie => movie.Year == yearToMatch)
+    .filter(movie => movie.score > 90)
+    .map(movie => movie.name)
+  return newMovies
 }
 
 /*
