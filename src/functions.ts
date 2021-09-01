@@ -168,7 +168,7 @@ function findTheNeedleIndex(strings: string[]): number {
  */
 
 function someoneToLove(strings: string[]): boolean {
-  return strings.some(string => strings.length === 4)
+  return strings.some(string => string.length === 4)
 }
 
 /*
